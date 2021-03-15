@@ -2,9 +2,6 @@
 title = "Making a Linux self-destruct password using libpam"
 +++
 
-Making a Linux self-destruct password using libpam
-========================
-
 # Introduction
 
 A lock-screen. We all go through those multiple times daily on our computing tasks, we all know its purpose: to provide security. But what if the lock-screen doesn't prove to be so secure anymore?
