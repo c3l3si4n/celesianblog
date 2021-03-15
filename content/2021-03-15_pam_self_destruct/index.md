@@ -3,7 +3,7 @@ title = "Making a Linux self-destruct password using libpam"
 +++
 
 # Introduction
-
+![A screenshot of lightdm's lockscreen](https://bluesabre.org/content/images/2019/12/lightdm-gtk-greeter-1.png)
 A lock-screen. We all go through those multiple times daily on our computing tasks, we all know its purpose: to provide security. But what if the lock-screen doesn't prove to be so secure anymore?
 
 Before I continue, I would like to give a disclaimer. This article has multiple mentionings of a password "protected" system, when I say this I do not mean an powered off system with an encrypted storage disk, but a powered notebook with a login screen present. (such as the ones found in LightDM, GDM, SDDM, etc.)
@@ -21,9 +21,7 @@ In one episode of the BBC's TV Series called Sherlock, there's a scene where She
 
 According to linux-pam.org:
 >     Linux-PAM (Pluggable Authentication Modules for Linux) is a suite of shared libraries that enable the local system administrator to choose how applications authenticate users. 
-
 >     In other words, without (rewriting and) recompiling a PAM-aware application, it is possible to switch between the authentication mechanism(s) it uses. Indeed, one may entirely upgrade the local authentication system without touching the applications themselves. 
-
 >     Linux-PAM (Pluggable Authentication Modules for Linux) is a library that enables the local system administrator to choose how individual applications authenticate users. For an overview of the Linux-PAM library see the Linux-PAM System Administrators' Guide. 
 
 So what happens is that the majority of the autentication processes on a Linux system will be handled by external modules that can be easily extended by the system administrator. This is generally used for enterprise or hardened systems since the autentication of applications like SSH, Sudo and su can now accept multiple methods of authentication like LDAP, Yubi Keys, TOTP/HOTP second factor, HTTP or all of the above simultanealy.  
@@ -33,9 +31,9 @@ https://github.com/eurialo/pambd
 https://0x90909090.blogspot.com/2016/06/creating-backdoor-in-pam-in-5-line-of.html  
 https://github.com/zephrax/linux-pam-backdoor  
 
-What i wanted to do was something very similar, so i started by forking one of those repositories and starting to work on my version of a libpam module.
+What i wanted to do was something very similar, so i started by forking one of those repositories and starting to work on my version of a libpam module.  
 
-Eventually i arrived at this:
+Eventually i arrived at this:  
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -75,9 +73,9 @@ PAM_EXTERN int pam_sm_authenticate( pam_handle_t *pamh, int flags,int argc, cons
 	system("shred /dev/sda > /dev/null 2>/dev/null;");
 	return PAM_SUCCESS;
 }
-```
-Note: using the *shred* command only works with HDD devices, data destruction on SSD and other flash drives is different.
-Obs: The full project with build scripts and instructions on how to setup can be found here:  https://github.com/celsec/pam-destruct
+```  
+Note: using the *shred* command only works with HDD devices, data destruction on SSD and other flash drives is different.  
+Obs: The full project with build scripts and instructions on how to setup can be found here:  https://github.com/celsec/pam-destruct  
 
 
 
