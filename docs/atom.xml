@@ -25,14 +25,8 @@
 &lt;blockquote&gt;
 &lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
 &lt;code&gt;Linux-PAM (Pluggable Authentication Modules for Linux) is a suite of shared libraries that enable the local system administrator to choose how applications authenticate users. 
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;code&gt;In other words, without (rewriting and) recompiling a PAM-aware application, it is possible to switch between the authentication mechanism(s) it uses. Indeed, one may entirely upgrade the local authentication system without touching the applications themselves. 
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
-&lt;code&gt;Linux-PAM (Pluggable Authentication Modules for Linux) is a library that enables the local system administrator to choose how individual applications authenticate users. For an overview of the Linux-PAM library see the Linux-PAM System Administrators&#x27; Guide. 
+In other words, without (rewriting and) recompiling a PAM-aware application, it is possible to switch between the authentication mechanism(s) it uses. Indeed, one may entirely upgrade the local authentication system without touching the applications themselves. 
+Linux-PAM (Pluggable Authentication Modules for Linux) is a library that enables the local system administrator to choose how individual applications authenticate users. For an overview of the Linux-PAM library see the Linux-PAM System Administrators&#x27; Guide. 
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;blockquote&gt;
 &lt;p&gt;So what happens is that the majority of the autentication processes on a Linux system will be handled by external modules that can be easily extended by the system administrator. This is generally used for enterprise or hardened systems since the autentication of applications like SSH, Sudo and su can now accept multiple methods of authentication like LDAP, Yubi Keys, TOTP&#x2F;HOTP second factor, HTTP or all of the above simultanealy.&lt;&#x2F;p&gt;
 &lt;p&gt;This is an interesting persistence vector for a hacker trying to maintain root access to a victim&#x27;s system, since they can easily implement a custom libpam module type of backdoor that always returns an Authentication Succeeded message to the application when his backdoor password is entered. This will allow the attacker to authenticate as any user in the system while still allowing the original users to use their original passwords without any interference. This has been done in the past multiple times by awesome people, here are some examples (sorry if i forgot to mention others):&lt;br &#x2F;&gt;
@@ -81,7 +75,7 @@ PAM_EXTERN &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int &l
 	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt; PAM_SUCCESS;
 }
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Note: using the &lt;em&gt;shred&lt;&#x2F;em&gt; command only works with HDD devices, data destruction on SSD and other flash drives is different.
+&lt;p&gt;Note: using the &lt;em&gt;shred&lt;&#x2F;em&gt; command only works with HDD devices, data destruction on SSD and other flash drives is different.&lt;br &#x2F;&gt;
 Obs: The full project with build scripts and instructions on how to setup can be found here:  https:&#x2F;&#x2F;github.com&#x2F;celsec&#x2F;pam-destruct&lt;&#x2F;p&gt;
 </content>
 	</entry>
