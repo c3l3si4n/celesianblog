@@ -14,7 +14,8 @@
 		<link href="https://celes.in/pam-self-destruct/" type="text/html"/>
 		<id>https://celes.in/pam-self-destruct/</id>
 		<content type="html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h1&gt;
-&lt;p&gt;A lock-screen. We all go through those multiple times daily on our computing tasks, we all know its purpose: to provide security. But what if the lock-screen doesn&#x27;t prove to be so secure anymore?&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;bluesabre.org&#x2F;content&#x2F;images&#x2F;2019&#x2F;12&#x2F;lightdm-gtk-greeter-1.png&quot; alt=&quot;A screenshot of lightdm&#x27;s lockscreen&quot; &#x2F;&gt;
+A lock-screen. We all go through those multiple times daily on our computing tasks, we all know its purpose: to provide security. But what if the lock-screen doesn&#x27;t prove to be so secure anymore?&lt;&#x2F;p&gt;
 &lt;p&gt;Before I continue, I would like to give a disclaimer. This article has multiple mentionings of a password &amp;quot;protected&amp;quot; system, when I say this I do not mean an powered off system with an encrypted storage disk, but a powered notebook with a login screen present. (such as the ones found in LightDM, GDM, SDDM, etc.)&lt;&#x2F;p&gt;
 &lt;p&gt;If you live in a distrustful nation and, for reasons like political activism or others, your notebook gets seized by the police, they will probably ask for your password kindly before trying more complicated (but doable) methods of retrieval. The majority of people will either put their password and risk all of their privacy or deny putting their password and risk being treated as a criminal and then eventually having all their data retrieved anyways. &lt;&#x2F;p&gt;
 &lt;p&gt;My view is that any kind of user input going into a system, even one as mundade as a password prompt, can be turned into what you want. Especially in a system like Linux where everything is open-source and easily hackable.&lt;&#x2F;p&gt;
