@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block extra_head %}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="example.com" />
+  {%if section.title%}
+  <title>{{ section.title }}</title>
+  <meta name="og:title" content="{{ section.title }}" />
+  {%endif%}
+  {%if page.title%}
+  <title>{{ page.title }}</title>
+  <meta name="og:title" content="{{ page.title }}" />
+  {%endif%}
+  {%if section.description%}
+  <meta name="description" content="{{ section.description }}" />
+  <meta name="og:description" content="{{ section.description }}" />
+  {%endif%}
+  {%if page.description%}
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="og:description" content="{{ page.description }}" />
+  {%endif%}
+{% endblock extra_head %}
+{% block content %}
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+  {{ page.content | safe }}
+</div>
+{% endblock content %}
+
