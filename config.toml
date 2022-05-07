@@ -46,8 +46,10 @@ external_links_no_referrer = true
 [extra]
 # Put all your custom variables here
 hyde_links = [
-    {url = "https://twitter.com/c3l3si4n", name = "My Twitter"},
-    {url = "https://github.com/c3l3si4n", name = "My Github"}
+    {url = "https://twitter.com/c3l3si4n", name = "Twitter"},
+    {url = "https://hackerone.com/celesian", name = "HackerOne"},
+    {url = "https://app.hackthebox.com/profile/114435", name = "HackTheBox"},
+    {url = "https://github.com/c3l3si4n", name = "Github"}
 ]
 
 
