@@ -49,7 +49,8 @@ hyde_links = [
     {url = "https://twitter.com/c3l3si4n", name = "Twitter"},
     {url = "https://hackerone.com/celesian", name = "HackerOne"},
     {url = "https://app.hackthebox.com/profile/114435", name = "HackTheBox"},
-    {url = "https://github.com/c3l3si4n", name = "Github"}
+    {url = "https://github.com/c3l3si4n", name = "Github"},
+    {url = "https://gist.github.com/c3l3si4n/111f0c4359ae15777ac775732b933ab4/raw/fd245c48d068f7c7c84fc2e1165d1227601aa5fc/cves.txt", name="CVEs"}
 ]
 
 
